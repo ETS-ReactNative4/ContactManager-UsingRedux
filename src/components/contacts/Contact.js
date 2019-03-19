@@ -10,7 +10,7 @@ class Contact extends Component {
 	};
 
 	onDeleteClick = (id) => {
-		//// DELETE CONTACT ////
+		this.props.deleteContact(id);
 	};
 
 	render() {
@@ -61,5 +61,5 @@ Contact.propTypes = {
 	contact: PropTypes.object.isRequired,
 	deleteContact: PropTypes.func.isRequired
 };
-// no state to props
+
 export default connect(null, { deleteContact })(Contact);
